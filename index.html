@@ -74,6 +74,9 @@
   }
 
   nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 400;
@@ -107,7 +110,7 @@
   /* ——— HERO ——— */
   .hero {
     min-height: 100vh;
-    padding: 120px 28px 80px;
+    padding: 104px 28px 64px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -203,7 +206,7 @@
     line-height: 1.5;
     color: rgba(238, 234, 227, 0.86);
     max-width: 520px;
-    margin-bottom: 56px;
+    margin-bottom: 36px;
     font-weight: 300;
     opacity: 0;
     animation: fadeUp 1.4s 0.7s forwards;
@@ -247,7 +250,7 @@
 
   /* ——— SECTIONS ——— */
   section {
-    padding: 100px 0;
+    padding: 64px 0;
     position: relative;
   }
 
@@ -260,7 +263,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
   }
 
   .section-num::after {
@@ -276,7 +279,7 @@
     font-size: clamp(32px, 7vw, 52px);
     line-height: 1.05;
     letter-spacing: -0.02em;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   h2 em {
@@ -405,7 +408,7 @@
   .story {
     background: var(--ink);
     color: var(--paper);
-    padding: 100px 0;
+    padding: 56px 0;
     position: relative;
     overflow: hidden;
   }
@@ -453,7 +456,7 @@
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 16px;
-    margin-top: 48px;
+    margin-top: 0;
   }
 
   .photo-slot {
@@ -544,7 +547,7 @@
 
   /* ——— VOICES (reviews) ——— */
   .voices {
-    padding: 100px 0;
+    padding: 64px 0;
   }
 
   .voice {
@@ -599,7 +602,7 @@
   .room {
     background: var(--ink);
     color: var(--paper);
-    padding: 100px 0;
+    padding: 64px 0;
     position: relative;
   }
 
@@ -638,8 +641,8 @@
   }
 
   .upcoming {
-    margin-top: 48px;
-    padding: 36px 28px;
+    margin-top: 28px;
+    padding: 28px 24px;
     border: 1px solid rgba(238, 234, 227, 0.2);
     background: rgba(238, 234, 227, 0.03);
     border-radius: 2px;
@@ -685,14 +688,14 @@
     font-family: 'JetBrains Mono', monospace;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .seats {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .seat {
@@ -781,56 +784,32 @@
     color: var(--stone-light);
   }
 
-  /* ——— HOW TO GET IN ——— */
-  .entry {
-    padding: 100px 0;
+  .upcoming-actions {
+    text-align: center;
   }
 
-  .steps {
-    counter-reset: step;
-    margin-top: 40px;
+  .upcoming-actions .cta {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
   }
 
-  .step {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 20px;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .step:last-child {
-    border-bottom: none;
-  }
-
-  .step-num {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 32px;
-    color: var(--rust);
-    line-height: 1;
-  }
-
-  .step-content h3 {
-    margin-bottom: 8px;
-  }
-
-  .step-content p {
-    font-size: 15px;
-    margin-bottom: 0;
+  .upcoming-actions .cta:hover {
+    background: #d4764e;
+    color: var(--paper);
+    border-color: #d4764e;
   }
 
   /* ——— CONDITIONS ——— */
   .conditions {
-    padding: 100px 0;
+    padding: 64px 0;
   }
 
   .conditions-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    margin-top: 40px;
+    margin-top: 28px;
   }
 
   .condition {
@@ -867,8 +846,8 @@
   }
 
   .organizers {
-    margin-top: 56px;
-    padding-top: 40px;
+    margin-top: 24px;
+    padding-top: 28px;
     border-top: 1px solid var(--line-strong);
   }
 
@@ -918,6 +897,26 @@
     object-position: center 34%;
   }
 
+  .organizer-photo img.danila-photo {
+    object-position: center 22%;
+  }
+
+  .organizer-initials {
+    width: 104px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-style: italic;
+    color: var(--rust);
+    background:
+      linear-gradient(145deg, rgba(168, 68, 42, 0.18), rgba(26, 22, 19, 0.08)),
+      var(--paper-warm);
+    border: 1px solid var(--line);
+  }
+
   .organizer-role {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
@@ -941,11 +940,11 @@
 
   /* ——— RHYTHM (program) ——— */
   .rhythm {
-    padding: 100px 0;
+    padding: 64px 0;
   }
 
   .day {
-    margin-bottom: 48px;
+    margin-bottom: 28px;
   }
 
   .day:last-child {
@@ -1007,7 +1006,7 @@
 
   /* ——— CORPORATE CASE ——— */
   .corporate {
-    padding: 100px 0;
+    padding: 64px 0;
   }
 
   .case-intro {
@@ -1079,7 +1078,7 @@
   .price {
     background: var(--ink);
     color: var(--paper);
-    padding: 100px 0;
+    padding: 64px 0;
     position: relative;
     overflow: hidden;
   }
@@ -1116,8 +1115,8 @@
   }
 
   .price-main {
-    margin: 48px 0;
-    padding: 40px 28px;
+    margin: 32px 0;
+    padding: 32px 24px;
     border: 1px solid rgba(238, 234, 227, 0.2);
     background: rgba(238, 234, 227, 0.03);
     text-align: center;
@@ -1189,7 +1188,7 @@
 
   /* ——— CTA ——— */
   .cta-section {
-    padding: 120px 0 100px;
+    padding: 64px 0 56px;
     text-align: center;
     background: var(--paper);
   }
@@ -1312,7 +1311,8 @@
       grid-template-columns: 76px 1fr;
       gap: 16px;
     }
-    .organizer-photo {
+    .organizer-photo,
+    .organizer-initials {
       width: 76px;
     }
     .case-stat {
@@ -1372,7 +1372,7 @@
 <body>
 
 <nav>
-  <div class="brand"><img class="brand-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel"></div>
+  <div class="brand"><img class="brand-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel"><span>Точка сборки на Бирюсе</span></div>
   <a class="contact" href="https://www.instagram.com/ramil_rs?igsh=Z29qMnMyb3M0YXJq&amp;utm_source=qr">@ramil_rs · красноярск</a>
 </nav>
 
@@ -1385,7 +1385,7 @@
 
   <div class="hero-body">
     <h1>
-      Восемь гостей.<br>
+      Десять гостей.<br>
       <em>Залив Бирюса.</em><br>
       36 часов.
       <span class="sub">Закрытая программа:<br>Точка сборки на Бирюсе · сезон 2026</span>
@@ -1411,7 +1411,7 @@
       <div class="line"><span class="label">нет</span><span class="value">ретрит</span></div>
       <div class="line"><span class="label">нет</span><span class="value">тренинг</span></div>
       <div class="line"><span class="label">нет</span><span class="value">корпоратив</span></div>
-      <div class="line"><span class="label is">да</span><span class="value is">36 часов, восемь человек, природа и разговор. Без посредников</span></div>
+      <div class="line"><span class="label is">да</span><span class="value is">36 часов, десять человек без связи и шума, дикая природа, гастрономическое сопровождение и глубокие разговоры.</span></div>
     </div>
 
     <div class="big-quote">
@@ -1424,21 +1424,6 @@
 <!-- ——— STORY ——— -->
 <section class="story">
   <div class="container">
-    <div class="section-num">02 / что происходит</div>
-    <h2>Приезжает <em>с шумом</em>.<br>Уезжает с тишиной.</h2>
-
-    <p>
-      Человек приезжает с рядом вопросов — или просто с шумом в голове. Уезжает с конкретными ответами. Или с пустотой, в которой потом эти ответы приходят сами.
-    </p>
-
-    <p>
-      У предпринимателя каждый день — десятки решений, звонков, уведомлений. Операционка не отпускает, голова забита, тело не чувствует. Нет паузы, чтобы выдохнуть, переключиться и подумать о действительно важном.
-    </p>
-
-    <p>
-      Программа создаёт эту паузу. Принудительно. Мы приезжаем в место, где нет связи. Чаще всего — без телефонов, без уведомлений. И тогда вопросы, которые человек привёз с собой, начинают звучать достаточно громко, чтобы он их наконец услышал.
-    </p>
-
     <div class="photo-grid">
       <figure class="photo-slot tall">
         <img src="assets/biryusa-place.jpg" alt="Залив Бирюса с вершины">
@@ -1447,7 +1432,7 @@
       <div class="photo-stack">
         <figure class="photo-slot">
           <img src="assets/biryusa-group.jpg" alt="Группа участников на заливе Бирюса">
-          <figcaption class="photo-caption">Группа · 8 участников</figcaption>
+          <figcaption class="photo-caption">Группа · 10 участников</figcaption>
         </figure>
         <figure class="photo-slot">
           <img src="assets/biryusa-fire.jpg" alt="Вечерний круг у костра">
@@ -1458,52 +1443,14 @@
   </div>
 </section>
 
-<!-- ——— VOICES ——— -->
-<section class="voices">
-  <div class="container">
-    <div class="section-num">03 / голоса тех, кто был</div>
-    <h2>Что <em>остаётся</em><br>после</h2>
-
-    <div class="voice">
-      <div class="voice-meta">
-        <span class="name">Егор</span>
-        <span class="role">Красноярск</span>
-      </div>
-      <blockquote>
-        «После Бирюсы я <strong>настолько хорошо перезагрузился</strong>, что потом поехал во Вьетнам на 10 дней — и там не отдохнул так глубоко, как на Бирюсе».
-      </blockquote>
-    </div>
-
-    <div class="voice">
-      <div class="voice-meta">
-        <span class="name">Оксана</span>
-        <span class="role">Новосибирск</span>
-      </div>
-      <blockquote>
-        «После поездки состояние ресурса держалось <strong>ещё около четырёх месяцев</strong>».
-      </blockquote>
-    </div>
-
-    <div class="voice">
-      <div class="voice-meta">
-        <span class="name">Екатерина</span>
-        <span class="role">Кемерово</span>
-      </div>
-      <blockquote>
-        «За 3 дня абсолютно посторонний человек может стать для тебя <strong>максимально близким и надёжным</strong>. Это точка, которая помогает избавиться от того, что тебя держит и не даёт развиваться».
-      </blockquote>
-    </div>
-  </div>
-</section>
-
 <!-- ——— ROOM ——— -->
 <section class="room">
   <div class="container">
-    <div class="section-num">04 / кто в комнате</div>
+    <div class="section-num">02 / кто в группе</div>
     <h2>Вы покупаете не поездку.<br>Вы покупаете <em>вход в группу</em>.</h2>
 
     <p>
-      Поездку можно купить в любом турагентстве. Войти в группу - нет. Группа — это восемь предпринимателей, людей дела, отобранных под этот заезд, 36 часов, за которые маски снимаются, а разговоры становятся настоящими.
+      Поездку можно купить в любом турагентстве. Войти в группу - нет. Группа — это десять людей дела, отобранных под этот заезд, 36 часов, за которые люди снимают маски и разговоры становятся более искренними.
     </p>
 
     <p>
@@ -1558,11 +1505,21 @@
           <span class="seat-status open">свободно</span>
           <span class="seat-desc">ждём вас</span>
         </div>
+        <div class="seat empty">
+          <span class="seat-num">09</span>
+          <span class="seat-status open">свободно</span>
+          <span class="seat-desc">ждём вас</span>
+        </div>
+        <div class="seat empty">
+          <span class="seat-num">10</span>
+          <span class="seat-status open">свободно</span>
+          <span class="seat-desc">ждём вас</span>
+        </div>
       </div>
 
       <div class="counter">
         <div class="counter-item">
-          <div class="counter-num">8</div>
+          <div class="counter-num">10</div>
           <div class="counter-label">мест всего</div>
         </div>
         <div class="counter-item">
@@ -1570,53 +1527,58 @@
           <div class="counter-label">уже в группе</div>
         </div>
         <div class="counter-item">
-          <div class="counter-num">5</div>
+          <div class="counter-num">7</div>
           <div class="counter-label">открыто по заявке</div>
         </div>
+      </div>
+      <div class="upcoming-actions">
+        <a href="https://max.ru/u/f9LHodD0cOJxScc7QiqGolfzAN0mPuKVmM-bKRwg9iz1cjPNGECQI_2LeOs" class="cta">
+          Оставить заявку в Max
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a href="https://t.me/Ramil_RS" class="cta-secondary">
+          или написать Рамилю в Telegram →
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ——— HOW TO GET IN ——— -->
-<section class="entry">
+<!-- ——— VOICES ——— -->
+<section class="voices">
   <div class="container">
-    <div class="section-num">05 / как попасть</div>
-    <h2>Без оплаты на сайте.<br><em>Через заявку.</em></h2>
+    <div class="section-num">03 / голоса тех, кто был</div>
+    <h2>Что <em>остаётся</em><br>после</h2>
 
-    <p>
-      В группе восемь человек. Это значит, что каждый участник формирует опыт остальных семи. Поэтому отбор — часть продукта, а не препятствие на пути к нему.
-    </p>
+    <div class="voice">
+      <div class="voice-meta">
+        <span class="name">Егор</span>
+        <span class="role">Красноярск</span>
+      </div>
+      <blockquote>
+        «За 36 часов на Бирюсе я перезагрузился и отдохнул лучше чем за 10 дней во Вьетнаме».
+      </blockquote>
+    </div>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">I</div>
-        <div class="step-content">
-          <h3>Заявка</h3>
-          <p>Короткая форма: чем занимаетесь, с каким вопросом едете, что хотите на выходе. 5 минут.</p>
-        </div>
+    <div class="voice">
+      <div class="voice-meta">
+        <span class="name">Оксана</span>
+        <span class="role">Новосибирск</span>
       </div>
-      <div class="step">
-        <div class="step-num">II</div>
-        <div class="step-content">
-          <h3>Созвон с Рамилем</h3>
-          <p>20 минут. Обсуждаем, ваш ли это заезд. Если нет — подбираем другой или честно говорим, что пока не время.</p>
-        </div>
+      <blockquote>
+        «После поездки состояние ресурса держалось <strong>ещё около четырёх месяцев</strong>».
+      </blockquote>
+    </div>
+
+    <div class="voice">
+      <div class="voice-meta">
+        <span class="name">Екатерина</span>
+        <span class="role">Кемерово</span>
       </div>
-      <div class="step">
-        <div class="step-num">III</div>
-        <div class="step-content">
-          <h3>Подтверждение и депозит</h3>
-          <p>Вы подтверждаете место депозитом. За две недели до выезда отправляем состав группы, бриф, логистику.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">IV</div>
-        <div class="step-content">
-          <h3>После</h3>
-          <p>Пожизненный чат с группой. Один личный созвон с Рамилем или Сергеем через месяц — о том, как идут дела.</p>
-        </div>
-      </div>
+      <blockquote>
+        «За 3 дня абсолютно посторонний человек может стать для тебя <strong>максимально близким и надёжным</strong>. Это точка, которая помогает избавиться от того, что тебя держит и не даёт развиваться».
+      </blockquote>
     </div>
   </div>
 </section>
@@ -1624,7 +1586,7 @@
 <!-- ——— CONDITIONS ——— -->
 <section class="conditions">
   <div class="container">
-    <div class="section-num">06 / условия</div>
+    <div class="section-num">04 / условия</div>
     <h2>Всё, что <em>стоит знать</em></h2>
 
     <div class="conditions-grid">
@@ -1638,11 +1600,11 @@
       </div>
       <div class="condition">
         <div class="condition-label">кто ведёт</div>
-        <div class="condition-value">Рамиль Сайфутдинов и Сергей Савин.</div>
+        <div class="condition-value">Рамиль Сайфутдинов, Сергей Савин и Данила Попов.</div>
       </div>
       <div class="condition">
         <div class="condition-label">сколько нас</div>
-        <div class="condition-value">8 участников. Ни больше, ни меньше.</div>
+        <div class="condition-value">10 участников. Ни больше, ни меньше.</div>
       </div>
       <div class="condition">
         <div class="condition-label">проживание</div>
@@ -1685,6 +1647,16 @@
             <p class="organizer-text">20+ лет в горах, пещерах и полевых условиях. Собственник «СибирьИнжиниринг». Бывший руководитель инженерных проектов: Красноярская ГЭС и другие. Отвечает за безопасность, глубокие разговоры и реальную среду, в которой всё происходит.</p>
           </div>
         </article>
+        <article class="organizer">
+          <div class="organizer-photo">
+            <img class="danila-photo" src="assets/danila-popov.png" alt="Данила Попов">
+          </div>
+          <div>
+            <div class="organizer-role">шеф-повар программы</div>
+            <h3 class="organizer-name">Данила Попов</h3>
+            <p class="organizer-text">10 лет в лучших ресторанах Красноярска. Участвовал в открытии проектов сети 0.75 GROUP. Умеет даже в тайге сделать из простых продуктов полноценный гастрономический опыт. Отвечает за питание, атмосферу и внимание к деталям.</p>
+          </div>
+        </article>
       </div>
     </div>
   </div>
@@ -1693,10 +1665,10 @@
 <!-- ——— RHYTHM ——— -->
 <section class="rhythm">
   <div class="container">
-    <div class="section-num">07 / ритм 36 часов</div>
+    <div class="section-num">05 / ритм 36 часов</div>
     <h2>Не расписание. <em>Траектория.</em></h2>
-    <p style="margin-bottom: 48px;">
-      Программа — скелет. Настоящее происходит между строк: ночной костёр, тишина в пещере, взгляд в глаза перед подъёмом, три часа разговора, который не хотелось заканчивать.
+    <p style="margin-bottom: 28px;">
+      Программа — это скорее направление, чем расписание. Самое важное обычно происходит не по плану: разговоры у костра глубокой ночью, тишина в пещере, чай после подъёма, моменты, когда люди вдруг начинают говорить по-настоящему. Именно ради этого всё и собирается.
     </p>
 
     <div class="day">
@@ -1727,69 +1699,14 @@
   </div>
 </section>
 
-<!-- ——— CORPORATE ——— -->
-<section class="corporate">
-  <div class="container">
-    <div class="section-num">08 / для команд</div>
-    <h2>Тот же опыт — <em>но для команды</em></h2>
-
-    <p>
-      Иногда вопрос приходит не от одного человека, а от команды. Тогда мы выкупаем весь заезд целиком: те же 36 часов, та же среда, но внутри — одна компания. За пределами офиса статусы и роли перестают работать — остаются люди, которые вместе прошли через холод, темноту и высоту.
-    </p>
-
-    <div class="case-intro" style="margin-top: 40px;">Корпоративный кейс · Промышленная компания</div>
-    <h3 style="font-size: 28px; margin-bottom: 20px;">22 человека, оборот <em style="font-style: italic; color: var(--rust);">2,1 млрд</em></h3>
-
-    <p>
-      Запрос был простой: снять напряжение между «старыми» и «новыми», выстроить доверие, сделать из коллектива команду. Мы не делали тимбилдинг — мы поместили людей в условия, где работает только совместное преодоление.
-    </p>
-
-    <div class="case-stat">
-      <div class="stat-item">
-        <div class="num">22</div>
-        <div class="label">человека</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">2</div>
-        <div class="label">дня</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">3,5</div>
-        <div class="label">часа у костра</div>
-      </div>
-      <div class="stat-item">
-        <div class="num">1</div>
-        <div class="label">связка на 22</div>
-      </div>
-    </div>
-
-    <div class="case-quote">
-      <blockquote>
-        «После поездки, заходя в офис, чувствовалось, что атмосфера поменялась к лучшему. Цель события достигнута на 100%. Очень многое узнал о своей команде и о каждом человеке».
-      </blockquote>
-      <div class="attr">— директор компании, две недели спустя</div>
-
-      <blockquote>
-        «Девочки сидят в отдельном кабинете, и мы практически с ними не общались, — а тут мы столько узнали друг о друге. Подавали им руки в пещере, поддерживали, теперь знаем даже размер их ног, так как приходилось их держать в пещере».
-      </blockquote>
-      <div class="attr">— менеджер компании</div>
-
-      <blockquote>
-        «Прошлый корпоратив в Дубае, а сейчас в глуши в сапогах таскаем дрова. Что будет дальше?»
-      </blockquote>
-      <div class="attr">— девушки компании, когда носили дрова для общего костра</div>
-    </div>
-  </div>
-</section>
-
 <!-- ——— PRICE ——— -->
 <section class="price">
   <div class="container">
-    <div class="section-num">09 / стоимость</div>
+    <div class="section-num">06 / стоимость</div>
     <h2>За вход <em>в группу</em></h2>
 
     <div class="price-main">
-      <div class="price-amount">30<em> 000</em></div>
+      <div class="price-amount">35<em> 000</em></div>
       <div class="price-currency">рублей · с человека</div>
       <div class="price-note">включая всё, кроме дороги до Шумихи</div>
     </div>
@@ -1799,6 +1716,7 @@
       <div class="include-item">36 часов программы «Точка сборки на Бирюсе» от команды Open Mind Travel</div>
       <div class="include-item">проживание на уютной базе</div>
       <div class="include-item">шеф-повар, все завтраки, обеды, ужины, чаи</div>
+      <div class="include-item">4 часа переходов на яхте</div>
       <div class="include-item">снаряжение для пещеры и подъёма</div>
       <div class="include-item">баня, вечерний костёр, аренда яхты и лодок</div>
       <div class="include-item">пожизненный чат группы после выезда</div>
@@ -1810,7 +1728,7 @@
 <!-- ——— CTA ——— -->
 <section class="cta-section">
   <div class="container">
-    <h2>Следующий заезд — <em>19–21 июня</em>.<br>5 мест из 8.</h2>
+    <h2>Следующий заезд — <em>19–21 июня</em>.<br>7 мест из 10.</h2>
 
     <p style="max-width: 480px; margin: 0 auto 32px;">
       Дальше — заявка и 20 минут созвона с Рамилем. Он скажет честно, ваш это заезд или нет. Если нет — предложит другой.
