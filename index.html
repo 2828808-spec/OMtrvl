@@ -68,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -79,14 +80,17 @@
     gap: 14px;
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.02em;
     text-transform: none;
-    font-size: 15px;
+    font-size: clamp(18px, 2.1vw, 25px);
+    line-height: 1;
+    min-width: 0;
   }
 
   nav .brand span {
     color: var(--rust);
+    white-space: nowrap;
   }
 
   nav .brand-logo {
@@ -98,13 +102,21 @@
   nav .contact {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: var(--stone);
+    color: var(--paper);
+    background: var(--ink);
     text-decoration: none;
+    padding: 12px 16px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   nav .contact:hover {
-    color: var(--rust);
+    color: var(--paper);
+    background: var(--rust);
+    border-color: var(--rust);
   }
 
   /* ——— HERO ——— */
@@ -1328,8 +1340,21 @@
       grid-template-columns: 1fr;
       gap: 6px;
     }
+    nav {
+      padding: 14px 16px;
+      gap: 12px;
+    }
+    nav .brand {
+      gap: 10px;
+      font-size: 16px;
+    }
+    nav .brand-logo {
+      width: 88px;
+    }
     nav .contact {
-      display: none;
+      font-size: 9px;
+      padding: 10px 12px;
+      letter-spacing: 0.12em;
     }
   }
 
@@ -1373,7 +1398,7 @@
 
 <nav>
   <div class="brand"><img class="brand-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel"><span>Точка сборки на Бирюсе</span></div>
-  <a class="contact" href="https://www.instagram.com/ramil_rs?igsh=Z29qMnMyb3M0YXJq&amp;utm_source=qr">@ramil_rs · красноярск</a>
+  <a class="contact" href="https://t.me/Ramil_RS">Оставить заявку в ТГ</a>
 </nav>
 
 <!-- ——— HERO ——— -->
@@ -1642,7 +1667,7 @@
             <img src="assets/sergey-savin-fast.jpg" alt="Сергей Савин" loading="lazy" decoding="async">
           </div>
           <div>
-            <div class="organizer-role">организатор экспедиций · сооснователь программы "Точка сборки на Бирюсе"</div>
+            <div class="organizer-role">основатель проекта "путь к себе" - 2С · сооснователь программы "Точка сборки на Бирюсе"</div>
             <h3 class="organizer-name">Сергей Савин</h3>
             <p class="organizer-text">20+ лет в горах, пещерах и полевых условиях. Собственник «СибирьИнжиниринг». Бывший руководитель инженерных проектов: Красноярская ГЭС и другие. Отвечает за безопасность, глубокие разговоры и реальную среду, в которой всё происходит.</p>
           </div>
@@ -1652,7 +1677,7 @@
             <img class="danila-photo" src="assets/danila-popov-fast.jpg" alt="Данила Попов" loading="lazy" decoding="async">
           </div>
           <div>
-            <div class="organizer-role">шеф-повар программы</div>
+            <div class="organizer-role">шеф-повар Open Mind Travel</div>
             <h3 class="organizer-name">Данила Попов</h3>
             <p class="organizer-text">10 лет в лучших ресторанах Красноярска. Участвовал в открытии проектов сети 0.75 GROUP. Умеет даже в тайге сделать из простых продуктов полноценный гастрономический опыт. Отвечает за питание, атмосферу и внимание к деталям.</p>
           </div>
