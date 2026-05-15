@@ -6,7 +6,8 @@
 <title>Точка сборки на Бирюсе</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-biryusa-ultra.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #1a1613;
@@ -141,7 +142,7 @@
     background:
       linear-gradient(90deg, rgba(13, 17, 16, 0.88) 0%, rgba(13, 17, 16, 0.64) 44%, rgba(13, 17, 16, 0.24) 100%),
       linear-gradient(180deg, rgba(13, 17, 16, 0.42) 0%, rgba(13, 17, 16, 0.08) 42%, rgba(13, 17, 16, 0.76) 100%),
-      url("assets/hero-biryusa-fast.jpg") center 56% / cover no-repeat,
+      url("assets/hero-biryusa-ultra.jpg") center 56% / cover no-repeat,
       var(--ink);
   }
 
@@ -197,7 +198,7 @@
     font-weight: 300;
     font-size: clamp(44px, 11vw, 88px);
     line-height: 0.95;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     margin: 40px 0 32px;
     color: var(--paper);
     text-shadow: 0 18px 48px rgba(0, 0, 0, 0.38);
@@ -300,7 +301,7 @@
     font-weight: 300;
     font-size: clamp(32px, 7vw, 52px);
     line-height: 1.05;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     margin-bottom: 28px;
   }
 
@@ -315,7 +316,7 @@
     font-size: 22px;
     line-height: 1.3;
     margin-bottom: 14px;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
 
   p {
@@ -580,7 +581,7 @@
 
   /* ——— VOICES (reviews) ——— */
   .voices {
-    padding: 64px 0;
+    padding: 64px 0 36px;
   }
 
   .voice {
@@ -705,7 +706,7 @@
     font-family: 'Fraunces', serif;
     font-size: 36px;
     font-weight: 300;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--paper);
     margin-bottom: 8px;
   }
@@ -835,7 +836,7 @@
 
   /* ——— CONDITIONS ——— */
   .conditions {
-    padding: 64px 0;
+    padding: 36px 0 64px;
   }
 
   .conditions-grid {
@@ -1064,7 +1065,7 @@
     font-weight: 300;
     color: var(--rust);
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   .stat-item .label {
@@ -1160,7 +1161,7 @@
     font-size: 72px;
     font-weight: 300;
     color: var(--paper);
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     line-height: 1;
     margin-bottom: 12px;
   }
@@ -1323,11 +1324,61 @@
   }
 
   @media (max-width: 600px) {
+    nav {
+      padding: 14px 18px;
+      gap: 14px;
+    }
+    nav .brand {
+      gap: 10px;
+      font-size: clamp(17px, 4.6vw, 24px);
+      line-height: 1;
+    }
+    nav .brand span {
+      max-width: 46vw;
+    }
+    nav .brand-logo {
+      width: 92px;
+    }
+    nav .contact {
+      width: 82px;
+      min-height: 42px;
+      padding: 7px 9px;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
     .hero {
+      padding: 112px 24px 56px;
       background:
         linear-gradient(180deg, rgba(13, 17, 16, 0.72) 0%, rgba(13, 17, 16, 0.34) 38%, rgba(13, 17, 16, 0.84) 100%),
-        url("assets/hero-biryusa-fast.jpg") center 58% / cover no-repeat,
+        url("assets/hero-biryusa-ultra.jpg") center 58% / cover no-repeat,
         var(--ink);
+    }
+    .hero-meta {
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      line-height: 1.35;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 13vw, 62px);
+      line-height: 0.98;
+      margin: 32px 0 28px;
+    }
+    .hero h1 .sub {
+      font-size: 0.32em;
+      line-height: 1.35;
+      letter-spacing: 0.14em;
+      margin-top: 20px;
+    }
+    .hero-lede {
+      font-size: 17px;
+      line-height: 1.45;
+      margin-bottom: 30px;
+    }
+    .hero-scroll {
+      font-size: 9px;
+      letter-spacing: 0.14em;
     }
     .photo-grid {
       grid-template-columns: 1fr;
@@ -1365,22 +1416,43 @@
       gap: 6px;
     }
     nav {
-      padding: 14px 16px;
-      gap: 12px;
+      padding: 12px 14px;
+      gap: 10px;
     }
     nav .brand {
-      gap: 10px;
-      font-size: clamp(16px, 5.4vw, 22px);
+      gap: 8px;
+      font-size: clamp(15px, 5vw, 19px);
     }
     nav .brand-logo {
-      width: 82px;
+      width: 70px;
+    }
+    nav .brand span {
+      max-width: 42vw;
     }
     nav .contact {
       font-size: 9px;
-      width: 78px;
+      width: 74px;
       min-height: 40px;
-      padding: 7px 9px;
+      padding: 7px 8px;
+      letter-spacing: 0.08em;
+    }
+    .hero {
+      padding: 106px 20px 48px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 12.5vw, 52px);
+      margin-top: 28px;
+    }
+    .hero h1 .sub {
+      font-size: 0.3em;
+      letter-spacing: 0.1em;
+    }
+    .hero-meta {
+      font-size: 8.5px;
       letter-spacing: 0.12em;
+    }
+    .hero-scroll::before {
+      width: 28px;
     }
   }
 
@@ -1423,7 +1495,7 @@
 <body>
 
 <nav>
-  <div class="brand"><img class="brand-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel"><span>Точка сборки на Бирюсе</span></div>
+  <div class="brand"><img class="brand-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel" width="116" height="40"><span>Точка сборки на Бирюсе</span></div>
   <a class="contact" href="https://t.me/Ramil_RS">Стать<br>участником</a>
 </nav>
 
@@ -1477,30 +1549,30 @@
   <div class="container">
     <div class="photo-grid">
       <figure class="photo-slot tall">
-        <img src="assets/biryusa-place-fast.jpg" alt="Залив Бирюса с вершины" loading="lazy" decoding="async">
+        <img src="assets/biryusa-place-ultra.jpg" alt="Залив Бирюса с вершины" width="675" height="900" loading="lazy" decoding="async">
         <figcaption class="photo-caption">Бирюса · отдых на горе</figcaption>
       </figure>
       <div class="photo-stack">
         <figure class="photo-slot">
-          <img src="assets/biryusa-group-fast.jpg" alt="Группа участников на заливе Бирюса" loading="lazy" decoding="async">
+          <img src="assets/biryusa-group-ultra.jpg" alt="Группа участников на заливе Бирюса" width="675" height="900" loading="lazy" decoding="async">
           <figcaption class="photo-caption">Группа · 10 участников</figcaption>
         </figure>
         <figure class="photo-slot">
-          <img src="assets/biryusa-fire-fast.jpg" alt="Вечерний круг у костра" loading="lazy" decoding="async">
+          <img src="assets/biryusa-fire-ultra.jpg" alt="Вечерний круг у костра" width="638" height="850" loading="lazy" decoding="async">
           <figcaption class="photo-caption">Костёр · вечерний круг</figcaption>
         </figure>
       </div>
       <div class="photo-row">
         <figure class="photo-slot">
-          <img src="assets/biryusa-yacht-fast.jpg" alt="Яхта на заливе Бирюса" loading="lazy" decoding="async">
+          <img src="assets/biryusa-yacht-ultra.jpg" alt="Яхта на заливе Бирюса" width="675" height="900" loading="lazy" decoding="async">
           <figcaption class="photo-caption">Яхта · переход по заливу</figcaption>
         </figure>
         <figure class="photo-slot">
-          <img src="assets/biryusa-yacht-group-fast.jpg" alt="Группа на яхте на закате" loading="lazy" decoding="async">
+          <img src="assets/biryusa-yacht-group-ultra.jpg" alt="Группа на яхте на закате" width="675" height="900" loading="lazy" decoding="async">
           <figcaption class="photo-caption">Закат · группа на борту</figcaption>
         </figure>
         <figure class="photo-slot">
-          <img src="assets/biryusa-shore-group-fast.jpg" alt="Участники у воды перед выходом" loading="lazy" decoding="async">
+          <img src="assets/biryusa-shore-group-ultra.jpg" alt="Участники у воды перед выходом" width="675" height="900" loading="lazy" decoding="async">
           <figcaption class="photo-caption">Берег · перед выходом</figcaption>
         </figure>
       </div>
@@ -1694,7 +1766,7 @@
       <div class="organizer-list">
         <article class="organizer">
           <div class="organizer-photo">
-            <img src="assets/ramil-sayfutdinov-fast.jpg" alt="Рамиль Сайфутдинов" loading="lazy" decoding="async">
+            <img src="assets/ramil-sayfutdinov-ultra.jpg" alt="Рамиль Сайфутдинов" width="194" height="420" loading="lazy" decoding="async">
           </div>
           <div>
             <div class="organizer-role">основатель Open Mind Travel</div>
@@ -1704,7 +1776,7 @@
         </article>
         <article class="organizer">
           <div class="organizer-photo">
-            <img src="assets/sergey-savin-fast.jpg" alt="Сергей Савин" loading="lazy" decoding="async">
+            <img src="assets/sergey-savin-ultra.jpg" alt="Сергей Савин" width="244" height="420" loading="lazy" decoding="async">
           </div>
           <div>
             <div class="organizer-role">основатель проекта "путь к себе" - 2С · сооснователь программы "Точка сборки на Бирюсе"</div>
@@ -1714,7 +1786,7 @@
         </article>
         <article class="organizer">
           <div class="organizer-photo">
-            <img class="danila-photo" src="assets/danila-popov-fast.jpg" alt="Данила Попов" loading="lazy" decoding="async">
+            <img class="danila-photo" src="assets/danila-popov-ultra.jpg" alt="Данила Попов" width="315" height="420" loading="lazy" decoding="async">
           </div>
           <div>
             <div class="organizer-role">шеф-повар Open Mind Travel</div>
@@ -1811,7 +1883,7 @@
 </section>
 
 <footer>
-  <img class="footer-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel">
+  <img class="footer-logo" src="assets/open-mind-logo.svg" alt="Open Mind Travel" width="132" height="46" loading="lazy" decoding="async">
   <div class="footer-meta">Красноярск · Бирюса · 2026</div>
 </footer>
 
