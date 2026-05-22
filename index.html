@@ -1220,6 +1220,69 @@
     font-family: 'Fraunces', serif;
   }
 
+  /* ——— DATES ——— */
+  .next-dates {
+    padding: 56px 0 64px;
+    background: var(--paper-warm);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .next-dates .section-num {
+    margin-bottom: 28px;
+  }
+
+  .dates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 28px 0 8px;
+  }
+
+  .date-card {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .date-card:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .date-main {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 4.5vw, 30px);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .date-month {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rust);
+    white-space: nowrap;
+  }
+
+  .next-dates-action {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .next-dates-action .cta {
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
   /* ——— CTA ——— */
   .cta-section {
     padding: 64px 0 56px;
@@ -1407,6 +1470,15 @@
     }
     .price-amount {
       font-size: 56px;
+    }
+    .dates-grid {
+      grid-template-columns: 1fr;
+    }
+    .date-card:nth-last-child(-n + 2) {
+      border-bottom: 1px solid var(--line);
+    }
+    .date-card:last-child {
+      border-bottom: none;
     }
   }
 
@@ -1598,7 +1670,7 @@
       <div class="upcoming-label">
         <span class="dot"></span>Ближайший заезд
       </div>
-      <div class="upcoming-date">19–21 <em>июня</em></div>
+      <div class="upcoming-date">19–20 <em>июня</em></div>
       <div class="upcoming-location">Бирюса · уютная база</div>
 
       <div class="seats">
@@ -1865,7 +1937,7 @@
 <!-- ——— CTA ——— -->
 <section class="cta-section">
   <div class="container">
-    <h2>Следующий заезд — <em>19–21 июня</em>.<br>7 мест из 10.</h2>
+    <h2>Ближайший заезд — <em>19–20 июня</em>.<br>7 мест из 10.</h2>
 
     <p style="max-width: 480px; margin: 0 auto 32px;">
       Дальше — заявка и 20 минут созвона с Рамилем. Он скажет честно, ваш это заезд или нет. Если нет — предложит другой.
@@ -1879,6 +1951,48 @@
     <a href="https://t.me/Ramil_RS" class="cta-secondary">
       или написать Рамилю в Telegram →
     </a>
+  </div>
+</section>
+
+<!-- ——— NEXT DATES ——— -->
+<section class="next-dates">
+  <div class="container">
+    <div class="section-num">07 / даты следующих заездов</div>
+    <h2>Можно выбрать <em>свой заезд</em></h2>
+
+    <div class="dates-grid">
+      <div class="date-card">
+        <span class="date-main">21–22</span>
+        <span class="date-month">августа</span>
+      </div>
+      <div class="date-card">
+        <span class="date-main">4–5</span>
+        <span class="date-month">сентября</span>
+      </div>
+      <div class="date-card">
+        <span class="date-main">18–19</span>
+        <span class="date-month">сентября</span>
+      </div>
+      <div class="date-card">
+        <span class="date-main">2–3</span>
+        <span class="date-month">октября</span>
+      </div>
+      <div class="date-card">
+        <span class="date-main">16–17</span>
+        <span class="date-month">октября</span>
+      </div>
+      <div class="date-card">
+        <span class="date-main">30–31</span>
+        <span class="date-month">октября</span>
+      </div>
+    </div>
+
+    <div class="next-dates-action">
+      <a href="https://max.ru/u/f9LHodD0cOJxScc7QiqGolfzAN0mPuKVmM-bKRwg9iz1cjPNGECQI_2LeOs" class="cta">
+        Оставить заявку на следующий заезд
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
   </div>
 </section>
 
