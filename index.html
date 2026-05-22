@@ -1248,6 +1248,17 @@
     border-bottom: 1px solid var(--line);
   }
 
+  .date-card::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--rust);
+    box-shadow: 0 0 0 4px rgba(168, 68, 42, 0.12);
+    flex: 0 0 auto;
+    transform: translateY(-2px);
+  }
+
   .date-card:last-child {
     border-bottom: none;
   }
